@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0E113BE01FF27217004E6ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E113BDF1FF27217004E6ACA /* AppDelegate.swift */; };
-		0E113BE21FF27217004E6ACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E113BE11FF27217004E6ACA /* ViewController.swift */; };
 		0E113BE51FF27217004E6ACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E113BE31FF27217004E6ACA /* Main.storyboard */; };
 		0E113BE71FF27217004E6ACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E113BE61FF27217004E6ACA /* Assets.xcassets */; };
 		0E113BEA1FF27217004E6ACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E113BE81FF27217004E6ACA /* LaunchScreen.storyboard */; };
 		0E113BF51FF27217004E6ACA /* BoekenjagersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E113BF41FF27217004E6ACA /* BoekenjagersTests.swift */; };
+		0E23D1801FF28B2B00331A01 /* BoekenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D17F1FF28B2B00331A01 /* BoekenViewController.swift */; };
+		0E23D1821FF28B4100331A01 /* GemeentenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1811FF28B4100331A01 /* GemeentenViewController.swift */; };
+		0E23D1841FF28B5700331A01 /* NieuwBoekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1831FF28B5700331A01 /* NieuwBoekViewController.swift */; };
+		0E23D1861FF28B6800331A01 /* BoekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1851FF28B6800331A01 /* BoekViewController.swift */; };
+		0E23D1891FF28C4E00331A01 /* Boek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1881FF28C4E00331A01 /* Boek.swift */; };
+		0E23D18B1FF28C5E00331A01 /* Locatie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D18A1FF28C5E00331A01 /* Locatie.swift */; };
+		0E23D18E1FF2944800331A01 /* GemeenteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D18D1FF2944800331A01 /* GemeenteCell.swift */; };
+		0E23D1921FF299B500331A01 /* BoekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1911FF299B500331A01 /* BoekCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +35,6 @@
 /* Begin PBXFileReference section */
 		0E113BDC1FF27217004E6ACA /* Boekenjagers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boekenjagers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E113BDF1FF27217004E6ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E113BE11FF27217004E6ACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E113BE41FF27217004E6ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E113BE61FF27217004E6ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E113BE91FF27217004E6ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +42,14 @@
 		0E113BF01FF27217004E6ACA /* BoekenjagersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoekenjagersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E113BF41FF27217004E6ACA /* BoekenjagersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekenjagersTests.swift; sourceTree = "<group>"; };
 		0E113BF61FF27217004E6ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E23D17F1FF28B2B00331A01 /* BoekenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekenViewController.swift; sourceTree = "<group>"; };
+		0E23D1811FF28B4100331A01 /* GemeentenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemeentenViewController.swift; sourceTree = "<group>"; };
+		0E23D1831FF28B5700331A01 /* NieuwBoekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NieuwBoekViewController.swift; sourceTree = "<group>"; };
+		0E23D1851FF28B6800331A01 /* BoekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekViewController.swift; sourceTree = "<group>"; };
+		0E23D1881FF28C4E00331A01 /* Boek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boek.swift; sourceTree = "<group>"; };
+		0E23D18A1FF28C5E00331A01 /* Locatie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatie.swift; sourceTree = "<group>"; };
+		0E23D18D1FF2944800331A01 /* GemeenteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemeenteCell.swift; sourceTree = "<group>"; };
+		0E23D1911FF299B500331A01 /* BoekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +91,10 @@
 		0E113BDE1FF27217004E6ACA /* Boekenjagers */ = {
 			isa = PBXGroup;
 			children = (
+				0E23D18C1FF2943D00331A01 /* Views */,
+				0E23D1871FF28C4500331A01 /* Model */,
+				0E23D17E1FF28AFF00331A01 /* ViewControllers */,
 				0E113BDF1FF27217004E6ACA /* AppDelegate.swift */,
-				0E113BE11FF27217004E6ACA /* ViewController.swift */,
 				0E113BE31FF27217004E6ACA /* Main.storyboard */,
 				0E113BE61FF27217004E6ACA /* Assets.xcassets */,
 				0E113BE81FF27217004E6ACA /* LaunchScreen.storyboard */,
@@ -94,6 +110,35 @@
 				0E113BF61FF27217004E6ACA /* Info.plist */,
 			);
 			path = BoekenjagersTests;
+			sourceTree = "<group>";
+		};
+		0E23D17E1FF28AFF00331A01 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E23D17F1FF28B2B00331A01 /* BoekenViewController.swift */,
+				0E23D1811FF28B4100331A01 /* GemeentenViewController.swift */,
+				0E23D1831FF28B5700331A01 /* NieuwBoekViewController.swift */,
+				0E23D1851FF28B6800331A01 /* BoekViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0E23D1871FF28C4500331A01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E23D1881FF28C4E00331A01 /* Boek.swift */,
+				0E23D18A1FF28C5E00331A01 /* Locatie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E23D18C1FF2943D00331A01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E23D18D1FF2944800331A01 /* GemeenteCell.swift */,
+				0E23D1911FF299B500331A01 /* BoekCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E113BE21FF27217004E6ACA /* ViewController.swift in Sources */,
+				0E23D1841FF28B5700331A01 /* NieuwBoekViewController.swift in Sources */,
+				0E23D1891FF28C4E00331A01 /* Boek.swift in Sources */,
+				0E23D18B1FF28C5E00331A01 /* Locatie.swift in Sources */,
+				0E23D1821FF28B4100331A01 /* GemeentenViewController.swift in Sources */,
+				0E23D1801FF28B2B00331A01 /* BoekenViewController.swift in Sources */,
+				0E23D1861FF28B6800331A01 /* BoekViewController.swift in Sources */,
 				0E113BE01FF27217004E6ACA /* AppDelegate.swift in Sources */,
+				0E23D1921FF299B500331A01 /* BoekCell.swift in Sources */,
+				0E23D18E1FF2944800331A01 /* GemeenteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
