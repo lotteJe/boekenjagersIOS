@@ -21,6 +21,7 @@
 		0E23D18E1FF2944800331A01 /* GemeenteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D18D1FF2944800331A01 /* GemeenteCell.swift */; };
 		0E23D1921FF299B500331A01 /* BoekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1911FF299B500331A01 /* BoekCell.swift */; };
 		0E541F851FF3A8F600DDF21C /* LegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E541F841FF3A8F600DDF21C /* LegeViewController.swift */; };
+		D4E054521BFE4F2D6DD3D2A2 /* Pods_Boekenjagers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626923BAA02ABD3765DE6557 /* Pods_Boekenjagers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,9 @@
 		0E23D18D1FF2944800331A01 /* GemeenteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemeenteCell.swift; sourceTree = "<group>"; };
 		0E23D1911FF299B500331A01 /* BoekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekCell.swift; sourceTree = "<group>"; };
 		0E541F841FF3A8F600DDF21C /* LegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegeViewController.swift; sourceTree = "<group>"; };
+		5DBFC239BCAFAD240E332D48 /* Pods-Boekenjagers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boekenjagers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boekenjagers/Pods-Boekenjagers.release.xcconfig"; sourceTree = "<group>"; };
+		626923BAA02ABD3765DE6557 /* Pods_Boekenjagers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boekenjagers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		874C28FCB4BC2300A06C6B55 /* Pods-Boekenjagers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boekenjagers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boekenjagers/Pods-Boekenjagers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E054521BFE4F2D6DD3D2A2 /* Pods_Boekenjagers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 				0E113BDE1FF27217004E6ACA /* Boekenjagers */,
 				0E113BF31FF27217004E6ACA /* BoekenjagersTests */,
 				0E113BDD1FF27217004E6ACA /* Products */,
+				AA40AFBB8409F55E5E23698C /* Pods */,
+				F0B08CFD1B5996865054FB47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AA40AFBB8409F55E5E23698C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				874C28FCB4BC2300A06C6B55 /* Pods-Boekenjagers.debug.xcconfig */,
+				5DBFC239BCAFAD240E332D48 /* Pods-Boekenjagers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0B08CFD1B5996865054FB47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				626923BAA02ABD3765DE6557 /* Pods_Boekenjagers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E113BF91FF27217004E6ACA /* Build configuration list for PBXNativeTarget "Boekenjagers" */;
 			buildPhases = (
+				069A415B6E404BBD21C8E82B /* [CP] Check Pods Manifest.lock */,
 				0E113BD81FF27217004E6ACA /* Sources */,
 				0E113BD91FF27217004E6ACA /* Frameworks */,
 				0E113BDA1FF27217004E6ACA /* Resources */,
+				3217E6763BD4E818F097B2A7 /* [CP] Embed Pods Frameworks */,
+				5FA6EB709AE3476A323F47FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +268,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		069A415B6E404BBD21C8E82B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boekenjagers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3217E6763BD4E818F097B2A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boekenjagers/Pods-Boekenjagers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boekenjagers/Pods-Boekenjagers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA6EB709AE3476A323F47FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boekenjagers/Pods-Boekenjagers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E113BD81FF27217004E6ACA /* Sources */ = {
@@ -407,6 +490,7 @@
 		};
 		0E113BFA1FF27217004E6ACA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874C28FCB4BC2300A06C6B55 /* Pods-Boekenjagers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -421,6 +505,7 @@
 		};
 		0E113BFB1FF27217004E6ACA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DBFC239BCAFAD240E332D48 /* Pods-Boekenjagers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

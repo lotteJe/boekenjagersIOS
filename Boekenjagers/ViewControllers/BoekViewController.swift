@@ -35,8 +35,8 @@ class BoekViewController: UIViewController {
         self.opmerkingLabel.text = self.boek.opmerking
         
         let geocoder = CLGeocoder()
-        let nummerStraat = boek.locatie.nummer + " " + boek.locatie.straat + ", "
-        let gemeenteLand = boek.locatie.gemeente + ", BE " + String(boek.locatie.postcode)
+        let nummerStraat = (boek.locatie?.nummer)! + " " + (boek.locatie?.straat)! + ", "
+        let gemeenteLand = (boek.locatie?.gemeente)! + ", BE " + String(describing: boek.locatie?.postcode)
         let address = nummerStraat + gemeenteLand
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
             if((error) != nil){

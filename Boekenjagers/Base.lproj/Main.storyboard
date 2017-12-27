@@ -241,7 +241,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Adres" id="MhQ-Vl-l4n" userLabel="Adres">
+                            <tableViewSection headerTitle="Verstopplaats" id="MhQ-Vl-l4n" userLabel="Adres">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="r4U-u3-inl">
                                         <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
