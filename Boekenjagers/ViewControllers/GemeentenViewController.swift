@@ -19,6 +19,7 @@ class GemeentenViewController: UIViewController {
     var boeken: Results<Boek>!
     
     override func viewDidLoad() {
+        title = "Boekenjagers"
         boeken = try! Realm().objects(Boek.self)
         uniekeGemeenten()
         splitViewController!.delegate = self
