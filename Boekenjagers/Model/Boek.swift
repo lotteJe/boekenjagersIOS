@@ -6,14 +6,20 @@
 //  Copyright © 2017 Lotte Jespers. All rights reserved.
 //
 
-class Boek {
+import RealmSwift
+
+class Boek: Object {
     
-    var titel: String
-    var auteur: String
-    var opmerking: String
-    var locatie: Locatie
+   
+    @objc dynamic var titel: String = ""
+    @objc dynamic var auteur: String  = ""
+    @objc dynamic var opmerking: String  = ""
+    @objc dynamic var locatie: Locatie? = Locatie()
     
-    init(titel: String, auteur: String, opmerking: String, locatie: Locatie){
+    
+    
+    convenience init(titel: String, auteur: String, opmerking: String, locatie: Locatie){
+        self.init()
         self.titel = titel
         self.auteur = auteur
         self.opmerking = opmerking

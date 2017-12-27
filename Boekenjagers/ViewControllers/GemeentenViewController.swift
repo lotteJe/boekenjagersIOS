@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class GemeentenViewController: UIViewController {
     
@@ -15,25 +16,18 @@ class GemeentenViewController: UIViewController {
     
     var gemeenten: [String] = []
     
-    var boeken: [Boek] = [
-        Boek(titel: "stolen", auteur: "lesley", opmerking: "Ligt achter de hoek", locatie: Locatie(straat: "Eiklaan", nummer: "23", postcode: 1600, gemeente: "SPL")),
-        Boek(titel: "Harry Potter", auteur: "J.K. Rowling", opmerking: "Hoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mijHoog en droog vind je mij", locatie: Locatie(straat: "Esdoornlaan", nummer: "1234", postcode: 1600, gemeente: "Halle")),
-        Boek(titel: "Programmeren", auteur: "Jakkes", opmerking: "Zoek het niet te ver", locatie: Locatie(straat: "Dries", nummer: "57", postcode: 1600, gemeente: "Nieuwerkerken")),
-        Boek(titel: "Lotte Jespers", auteur: "J.K. Rowling", opmerking: "Hoog en droog vind je mij", locatie: Locatie(straat: "Esdoornlaan", nummer: "1234", postcode: 1600, gemeente: "Halle")),
-        Boek(titel: "Ontwerpen", auteur: "Jakkes", opmerking: "Zoek het niet te ver", locatie: Locatie(straat: "Dries", nummer: "57", postcode: 1600, gemeente: "Nieuwerkerken"))
-    ]
+    var boeken: Results<Boek>!
     
     override func viewDidLoad() {
+        boeken = try! Realm().objects(Boek.self)
         uniekeGemeenten()
         splitViewController!.delegate = self
     }
     
-    private var indexPathToEdit: IndexPath!
-    
     func uniekeGemeenten(){
         var alleGemeenten: [String] = []
         for boek in boeken {
-            alleGemeenten.insert(boek.locatie.gemeente, at: 0)
+            alleGemeenten.insert((boek.locatie?.gemeente)!, at: 0)
         }
         gemeenten = Array(Set(alleGemeenten))
     }
@@ -42,7 +36,7 @@ class GemeentenViewController: UIViewController {
         var boekenPerGemeente: [Boek] = []
         
         for boek in boeken {
-            if(boek.locatie.gemeente == voor){
+            if(boek.locatie!.gemeente == voor){
                 boekenPerGemeente.insert(boek, at: 0)
             }
         }
@@ -67,14 +61,20 @@ class GemeentenViewController: UIViewController {
         switch segue.identifier {
         case "didAddBoek"?:
             let nieuwBoekViewController = segue.source as! NieuwBoekViewController
-            boeken.append(nieuwBoekViewController.boek!)
-            // let selection = collectionView.indexPathsForSelectedItems!.first!
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(nieuwBoekViewController.boek!)
+            }
             uniekeGemeenten()
             collectionView.reloadData()
         case "didFoundBoek"?:
             let boekViewcontroller = segue.source as! BoekViewController
-            let index = boeken.index(where: {$0 === boekViewcontroller.boek!})
-            boeken.remove(at: index!)
+            let boek = boekViewcontroller.boek!
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(boek)
+            }
+            //boeken.remove(at: index!)
             uniekeGemeenten()
             collectionView.reloadData()
         default:

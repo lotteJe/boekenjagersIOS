@@ -6,14 +6,19 @@
 //  Copyright © 2017 Lotte Jespers. All rights reserved.
 //
 
-class Locatie {
+import RealmSwift
+
+class Locatie: Object {
     
-    var straat: String
-    var nummer: String
-    var postcode: Int
-    var gemeente: String
+    @objc dynamic var straat:String = ""
+    @objc dynamic var nummer: String = ""
+    @objc dynamic var postcode: Int = 0
+    @objc dynamic var gemeente: String = ""
+
     
-    init(straat: String, nummer: String, postcode: Int, gemeente: String){
+    convenience init(straat: String, nummer: String, postcode: Int, gemeente: String){
+        
+        self.init()
         self.straat = straat
         self.nummer = nummer
         self.postcode = postcode
