@@ -30,6 +30,13 @@ class BoekenViewController: UIViewController {
             fatalError("Unknown segue")
         }
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if !splitViewController!.isCollapsed {
+            navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
+        }
+    }
 }
 
 extension BoekenViewController: UITableViewDataSource {

@@ -25,6 +25,7 @@ class GemeentenViewController: UIViewController {
     
     override func viewDidLoad() {
         uniekeGemeenten()
+        splitViewController!.delegate = self
     }
     
     private var indexPathToEdit: IndexPath!
@@ -53,7 +54,7 @@ class GemeentenViewController: UIViewController {
         case "nieuwBoek"?:
             break
         case "toonBoeken"?:
-            let boekenViewController = segue.destination as! BoekenViewController
+            let boekenViewController = (segue.destination as! UINavigationController).topViewController as! BoekenViewController
             let selection = collectionView.indexPathsForSelectedItems!.first!
             boekenViewController.boeken = boekenPerGemeente(voor: gemeenten[selection.item])
             boekenViewController.gemeente = gemeenten[selection.item]
@@ -94,4 +95,12 @@ extension GemeentenViewController: UICollectionViewDataSource {
         return cell
     }
     
+}
+extension GemeentenViewController: UISplitViewControllerDelegate {
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        // Do not collapse when the boeken view controller is showing, only when the empty view controller is showing.
+        let isShowingBoeken = (secondaryViewController as? UINavigationController)?.topViewController is BoekenViewController
+        return !isShowingBoeken
+    }
 }

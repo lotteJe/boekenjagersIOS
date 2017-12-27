@@ -20,6 +20,7 @@
 		0E23D18B1FF28C5E00331A01 /* Locatie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D18A1FF28C5E00331A01 /* Locatie.swift */; };
 		0E23D18E1FF2944800331A01 /* GemeenteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D18D1FF2944800331A01 /* GemeenteCell.swift */; };
 		0E23D1921FF299B500331A01 /* BoekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E23D1911FF299B500331A01 /* BoekCell.swift */; };
+		0E541F851FF3A8F600DDF21C /* LegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E541F841FF3A8F600DDF21C /* LegeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		0E23D18A1FF28C5E00331A01 /* Locatie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatie.swift; sourceTree = "<group>"; };
 		0E23D18D1FF2944800331A01 /* GemeenteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemeenteCell.swift; sourceTree = "<group>"; };
 		0E23D1911FF299B500331A01 /* BoekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoekCell.swift; sourceTree = "<group>"; };
+		0E541F841FF3A8F600DDF21C /* LegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				0E23D1811FF28B4100331A01 /* GemeentenViewController.swift */,
 				0E23D1831FF28B5700331A01 /* NieuwBoekViewController.swift */,
 				0E23D1851FF28B6800331A01 /* BoekViewController.swift */,
+				0E541F841FF3A8F600DDF21C /* LegeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				0E23D18B1FF28C5E00331A01 /* Locatie.swift in Sources */,
 				0E23D1821FF28B4100331A01 /* GemeentenViewController.swift in Sources */,
 				0E23D1801FF28B2B00331A01 /* BoekenViewController.swift in Sources */,
+				0E541F851FF3A8F600DDF21C /* LegeViewController.swift in Sources */,
 				0E23D1861FF28B6800331A01 /* BoekViewController.swift in Sources */,
 				0E113BE01FF27217004E6ACA /* AppDelegate.swift in Sources */,
 				0E23D1921FF299B500331A01 /* BoekCell.swift in Sources */,
