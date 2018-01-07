@@ -34,7 +34,7 @@ Op deze pagina wordt een overzicht getoond van de boeken die te vinden zijn in d
 ![alt text](https://i.imgur.com/Us8rVYkl.png)
 
 ### Nieuw boek toevoegen
-Op deze pagina kunnen te vondeling gelegde boeken gemeld worden. Deze boeken worden dan aan de juiste gemeente toegvoegd en worden nu bewaard in de Realm databank. 
+Op deze pagina kunnen te vondeling gelegde boeken gemeld worden. Deze boeken worden dan aan de juiste gemeente toegevoegd en worden nu bewaard in de Realm databank. 
 
 ![alt text](https://imgur.com/S6Pj1JMl.png)
 
