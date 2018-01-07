@@ -36,7 +36,6 @@ class NieuwBoekViewController: UITableViewController {
         case "didAddBoek"?:
             let locatie = Locatie(straat: straatVeld.text!, nummer: nummerVeld.text!, postcode: Int(postcodeVeld.text!)!, gemeente: gemeenteVeld.text!)
             boek = Boek(titel: titelVeld.text!, auteur: auteurVeld.text!, opmerking: opmerkingVeld.text!, locatie: locatie)
-            
         default:
             fatalError("Unknown segue")
         }

@@ -17,6 +17,7 @@ class BoekViewController: UIViewController {
     @IBAction func buttonNavigeer(_ sender: Any) {
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapitem = MKMapItem(placemark: placemark)
+         mapitem.name = boek.titel + " " + boek.auteur
         let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         mapitem.openInMaps(launchOptions: options)
     }
